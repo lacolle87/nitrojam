@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -9,7 +7,7 @@
 /coverage
 
 # production
-/build
+/frontend/build
 
 # misc
 .DS_Store
@@ -21,3 +19,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/.idea
+/.idea/.gitignore
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/modules.xml
+/.idea/nitrojam.iml
+/.idea/codeStyles/Project.xml
+/.idea/vcs.xml
+/frontend/node_modules/

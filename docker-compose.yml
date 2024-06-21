@@ -1,0 +1,29 @@
+version: '3'
+
+volumes:
+  pg_data:
+  static:
+  backend_static:
+  backend_media:
+  logs:
+  docs:
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - static:/app/result_build
+    command: /bin/sh -c "cp -r /app/build/. /app/result_build/"
+
+  nginx:
+    image: nginx:1.22.1-alpine
+    restart: always
+    ports:
+      - "9000:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - static:/usr/share/nginx/html
+    depends_on:
+      - frontend
