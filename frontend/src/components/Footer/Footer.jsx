@@ -1,7 +1,9 @@
-import {Container, Row, Col} from 'reactstrap'
-import {Tooltip} from '@chakra-ui/react'
+import { Container, Row, Col } from 'reactstrap';
+import { Tooltip } from '@chakra-ui/react';
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="footer4 b-t spacer">
       <Container>
@@ -48,8 +50,7 @@ export function Footer() {
             <Col md="12">
               <div className="d-flex font-14 justify-content-between">
                 <div className="m-t-10 m-b-10 copyright">
-                  Copyright © 2023 Профессиональная студия звукозаписи Nitrojam
-                  REC | Powered by Nitrojam REC
+                  &copy; {currentYear} Профессиональная студия звукозаписи Nitrojam REC | Powered by Nitrojam REC
                 </div>
               </div>
               <div className="links ms-auto m-t-10 m-b-10">
@@ -65,5 +66,5 @@ export function Footer() {
         </div>
       </Container>
     </div>
-  )
+  );
 }
