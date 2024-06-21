@@ -52,8 +52,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs:
-      - frontend_tests
+    needs: [build_frontend_and_push_to_gitlab, build_nginx_and_push_to_gitlab]
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
