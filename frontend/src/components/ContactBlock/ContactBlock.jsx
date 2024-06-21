@@ -33,7 +33,7 @@ export function ContactBlock() {
               </div>
               <div className={css.block}>
                 <h2>Email</h2>
-                <Link to={'mailto:info@nitrojamrec.com'}>
+                <Link to={'mailto:record@nitrojam.ru'}>
                   <i className="fa fa-envelope"></i> info@nitrojamrec.com
                 </Link>
               </div>

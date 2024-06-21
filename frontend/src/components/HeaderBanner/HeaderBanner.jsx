@@ -13,7 +13,13 @@ export function HeaderBanner() {
       viewport={{once: true, amount: 0.2}}
       transition={{staggerChildren: 0.2}}
       className="static-slider-head"
-      style={{backgroundImage: `url(${bannerbg})`}}
+      style={{
+        backgroundImage: `url(${bannerbg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100vw',
+        height: '100vh',
+      }}
     >
       <div className="static-head-bg"></div>
       <Container>

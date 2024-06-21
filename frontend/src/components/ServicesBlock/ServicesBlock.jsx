@@ -100,12 +100,12 @@ export function ServicesBlock() {
               <>
                 Один час записи:{' '}
                 <Text as="b" color="#ffb100">
-                  1200 рублей
+                  1300 рублей
                 </Text>
                 <br />
                 день записи (с 11:00 до 22:00):{' '}
                 <Text as="b" color="#ffb100">
-                  11000 рублей
+                  12000 рублей
                 </Text>
               </>
             }

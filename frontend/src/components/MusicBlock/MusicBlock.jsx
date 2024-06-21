@@ -112,11 +112,11 @@ export function MusicBlock() {
                   className="left-side"
                 >
                   <div className="d-flex flex-column justify-content-lg-center align-items-start">
-                    <h2 className="text-warning">1200 рублей</h2>
+                    <h2 className="text-warning">1300 рублей</h2>
                     <p className="text-xl">1 час записи</p>
                   </div>
                   <div className="d-flex flex-column justify-content-lg-center align-items-start">
-                    <h2 className="text-warning">11000 рублей</h2>
+                    <h2 className="text-warning">12000 рублей</h2>
                     <p className="text-xl">День записи (с 11:00 до 22:00)</p>
                   </div>
                 </motion.div>

@@ -16,8 +16,8 @@ export function Footer() {
           </Col>
           <Col lg="3" md="6" className="m-b-30">
             <h5 className="m-b-20">Email</h5>
-            <a href="mailto:info@nitrojamrec.com" className="link">
-              info@nitrojamrec.com
+            <a href="mailto:record@nitrojam.ru" className="link">
+              record@nitrojam.ru
             </a>
           </Col>
           <Col lg="3" md="6">
@@ -29,7 +29,7 @@ export function Footer() {
               <a href="https://vk.ru/nitrojam" className="link">
                 <i className="fa fa-vk"></i>
               </a>
-              <a href="mailto:info@nitrojamrec.com" className="link">
+              <a href="mailto:record@nitrojam.ru" className="link">
                 <i className="fa fa-envelope"></i>
               </a>
               <Tooltip hasArrow label="Meta - запрещенная организация в РФ." bg='blue.800' color='white' borderRadius="5px">
