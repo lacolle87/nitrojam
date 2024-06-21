@@ -9,8 +9,8 @@ export function PageBanner({title, background}) {
       whileInView="animate"
       viewport={{once: true, amount: 0.2}}
       transition={{staggerChildren: 0.2}}
-      className="static-slider-head"
-      style={{backgroundImage: `url(${background})`, padding: `150px 0`}}
+      className="static-slider-head-page"
+      style={{backgroundImage: `url(${background})`, padding: `100px 0`}}
     >
       <div className="static-head-bg"></div>
       <Container>

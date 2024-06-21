@@ -1,4 +1,4 @@
-name: Main Kittygram workflows
+name: Main Nitrojam workflows
 
 on:
   push:
