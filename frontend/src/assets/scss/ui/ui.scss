@@ -1,0 +1,212 @@
+@import '../variable';
+
+a {
+    text-decoration: none;
+}
+/*******************
+topbar color
+*******************/
+.topbar.fixed-header {
+    background: $dark;
+}
+
+.button-box {
+    .btn {
+        margin: 6px
+    }
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+}
+
+/*******************
+Static slide 10
+*******************/
+/*******************
+Header 1
+*******************/
+
+.h1-nav {
+    padding: 15px 0;
+    .navbar-nav .nav-item {
+        margin: 0 20px;
+        .nav-link {
+            padding: 12px 0px;
+            color: $muted;
+            font-weight: 400;
+            &:hover {
+                color: $success;
+            }
+        }
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+/*******************
+Header 2
+*******************/
+
+.h2-nav {
+    padding: 15px 0;
+    .navbar-nav .nav-item {
+        margin: 0 20px;
+        .nav-link {
+            padding: 12px 0px;
+            color: $white;
+            font-weight: 400;
+            &:hover {
+                color: $info;
+            }
+        }
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+
+/*******************
+Feature 4
+*******************/
+
+.wrap-feature4-box {
+    .icon-round {
+        font-size: 45px;
+        width: 80px;
+        color: $themecolor;
+        line-height: 80px;
+        text-align: center;
+        display: inline-block;
+        margin: 20px 0 30px;
+        border-radius: 100%;
+    }
+}
+
+/*******************
+Feature 20
+*******************/
+.wrap-feature-20 {
+    margin-top: 60px;
+    [class*=col-lg-6] {
+        .card{
+            overflow: hidden;
+        }
+    }
+    .linking {
+        width: 100%;
+        display: block;
+        padding:35px 0;
+    }
+}
+
+/*******************
+Feature 30
+*******************/
+.feature30{
+    position: relative;
+}
+.wrap-feature30-box{
+    position: absolute;
+    top:20%;
+    right: 0px;
+}
+
+/*******************
+Portfolio 1
+*******************/
+.img-ho{
+    overflow:hidden;
+    img{
+        transition:0.1s ease-in;
+        &:hover{
+            transform:scale(1.1);
+        }
+    }
+}  
+
+/*******************
+Pricing 8
+*******************/
+.pricing8{
+    .pricing-box{
+        sup{
+            top:-20px;
+            font-size: 16px;
+        }
+        .btn{
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+        }   
+    }
+}
+
+/*******************
+Testimonial 3
+*******************/
+  
+  .testimonial3 {
+      .testi3 {
+          .card-body {
+              padding: 40px;
+          }
+          h6 {
+              line-height: 26px;
+          }
+          .thumb-img {
+              img {
+                  width: 60px;
+              }
+          }
+          .customer {
+              text-transform: uppercase;
+              font-size: 14px;
+              font-weight: 500;
+          }
+      }
+  }
+
+/*******************
+Blog homepage 2
+*******************/
+  
+.blog-home2 {
+    [class*=col-] {
+          transition: 0.2s ease-in;
+          &:hover {
+              transform: translateY(-10px);
+          } 
+      }
+    .date-pos{
+        padding: 10px;
+        display: inline-block;
+        position: absolute;
+        right:10px;
+        top:10px;
+        color:$white;
+        border-radius: $radius;
+        text-align: center;
+        span{
+            display: block;
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+}
+
+/*******************
+Responsive
+*******************/
+@media(max-width:1024px) {
+    .static-slider10{
+        .title{
+                font-size:60px;
+                line-height: 60px;
+            }
+    }
+    .topbar {
+        background: $dark;
+    }
+
+}
