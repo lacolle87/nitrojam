@@ -1,6 +1,5 @@
-import {useState} from 'react'
-import {useRef, useEffect} from 'react'
-import {HashLink as Link} from 'react-router-hash-link'
+import React, { useState, useRef, useEffect } from 'react'
+import { HashLink as Link } from 'react-router-hash-link'
 import {
   Container,
   NavbarBrand,
@@ -10,13 +9,16 @@ import {
   NavbarToggler,
   Collapse,
 } from 'reactstrap'
+import { useLocation } from 'react-router-dom'
 
 import logo from '../../assets/images/logos/white-text.png'
 
 export function Header() {
+  const location = useLocation()
+
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -25,6 +27,7 @@ export function Header() {
   const [navBackground, setNavBackground] = useState(false)
   const navRef = useRef()
   navRef.current = navBackground
+
   useEffect(() => {
     const handleScroll = () => {
       const show = window.scrollY > 50
@@ -38,6 +41,10 @@ export function Header() {
     }
   }, [])
 
+  useEffect(() => {
+    setIsOpen(false) // Закрываем меню при изменении маршрута
+  }, [location])
+
   return (
     <div className="topbar" id="top">
       <div
@@ -50,7 +57,7 @@ export function Header() {
         <Container className="po-relative">
           <Navbar className="navbar-expand-lg h6-nav-bar">
             <NavbarBrand>
-              <Link to={"/"} onClick={scrollToTop}>
+              <Link to={'/'} onClick={scrollToTop}>
                 <img src={logo} alt="nitrojam" />
               </Link>
             </NavbarBrand>
@@ -65,22 +72,22 @@ export function Header() {
             >
               <Nav navbar className="ms-auto">
                 <NavItem>
-                  <Link className="nav-link" to={'/'} onClick={scrollToTop}>
+                  <Link className="nav-link" smooth to={'/'} onClick={scrollToTop}>
                     Главная
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to={'/about_us'} onClick={scrollToTop}>
+                  <Link className="nav-link" smooth to={'/about_us'} onClick={scrollToTop}>
                     О нас
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to={'/services'} onClick={scrollToTop}>
+                  <Link className="nav-link" smooth to={'/services'} onClick={scrollToTop}>
                     Услуги
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to={'/#photos'}>
+                  <Link className="nav-link" smooth to={'/#photos'}>
                     Фотографии
                   </Link>
                 </NavItem>
