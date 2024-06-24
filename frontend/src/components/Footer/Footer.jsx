@@ -54,10 +54,10 @@ export function Footer() {
                 </div>
               </div>
               <div className="links ms-auto m-t-10 m-b-10">
-                <a href="/privacy" className="p-10 p-l-0">
+                <a href="/privacy" className="p-10 p-l-0 text-warning">
                   Политика конфиденциальности
                 </a>
-                <a href="/contact" className="p-10">
+                <a href="/contact" className="p-10 text-warning">
                   Контакты
                 </a>
               </div>

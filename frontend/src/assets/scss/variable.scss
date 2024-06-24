@@ -73,7 +73,7 @@ $img-shadow:0px 0px 30px rgba(115, 128, 157, 0.3);
 
 @mixin linear-gradient($direction, $color-stops...) {
   background: nth(nth($color-stops, 1), 1);
-  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: -webkit-linear-gradient(($direction), $color-stops);
   background: linear-gradient($direction, $color-stops);
 }
 

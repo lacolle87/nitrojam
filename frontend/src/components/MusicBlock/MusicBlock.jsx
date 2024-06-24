@@ -194,7 +194,7 @@ export function MusicBlock() {
         </div>
       </div>
 
-      <Container>
+      <Container className="swiperContainer">
         <Swiper
           autoplay={{
             delay: 2500,
