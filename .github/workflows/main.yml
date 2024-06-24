@@ -2,6 +2,8 @@ name: Main Nitrojam workflows
 
 on:
   push:
+    branches:
+      - master
 
 jobs:
   build_frontend_and_push_to_gitlab:
@@ -76,9 +78,9 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           script: |
             cd nitrojam
-            docker compose pull
-            docker compose down
-            docker compose up -d
+            docker compose -f docker-compose.yml pull
+            docker compose -f docker-compose.yml down
+            docker compose -f docker-compose.yml up -d
 
   send_message:
     runs-on: ubuntu-latest
