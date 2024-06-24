@@ -112,7 +112,7 @@ export function AboutUsBlock() {
                   <AccordionElement title={'DAW, AD/DA, Мониторы'}>
                     <UnorderedList spacing={3}>
                       <ListItem>Steinberg Cubase 12</ListItem>
-                      <ListItem>Antelope Audio Orion 32</ListItem>
+                      <ListItem>SSL Solid State Logic Alpha Link MADI AX Converter</ListItem>
                       <ListItem>Focal SM9</ListItem>
                       <ListItem>Avantone MixCubes</ListItem>
                     </UnorderedList>
@@ -121,25 +121,21 @@ export function AboutUsBlock() {
                     <Accordion allowToggle>
                       <AccordionElement title="Предусилители">
                         <UnorderedList spacing={3}>
-                          <ListItem>API 312 (6)</ListItem>
+                          <ListItem>API A2D</ListItem>
                           <ListItem>Phoenix Audio DRS-1R (3)</ListItem>
                           <ListItem>Roll Music Systems Tubule (2)</ListItem>
                           <ListItem>Rupert Neve 5024</ListItem>
+                          <ListItem>SSL XLogic Alpha VHD Pre 4-Channel Mic Preamp</ListItem>
+                          <ListItem>Maag Audio PREQ2 2 Kanal Preamp & EQ</ListItem>
                         </UnorderedList>
                       </AccordionElement>
                       <AccordionElement title="Динамическая обработка">
                         <UnorderedList spacing={3}>
                           <ListItem>API 2500</ListItem>
-                          <ListItem>
-                            Chandler LTD Little Devil Compressor (2)
-                          </ListItem>
-                          <ListItem>Purple Audio MC77 (2)</ListItem>
-                          <ListItem>Phoenix Audio N90-DRC/500</ListItem>
-                          <ListItem>Tegeler Vocal Leveler</ListItem>
-                          <ListItem>
-                            Empirical Labs Distressor EL8X (2)
-                          </ListItem>
-                          <ListItem>Elysia Xpressor</ListItem>
+                          <ListItem>Chandler LTD Little Devil Compressor (2)</ListItem>
+                          <ListItem>Purple Audio MC77</ListItem>
+                          <ListItem>Empirical Labs Distressor EL8X (2)</ListItem>
+                          <ListItem>Elysia Mpressor (2)</ListItem>
                           <ListItem>Elysia Nvelope</ListItem>
                           <ListItem>Roll Music Systems Valvop</ListItem>
                           <ListItem>Nitrojam 1176 rev.A</ListItem>
@@ -151,18 +147,15 @@ export function AboutUsBlock() {
                           <ListItem>A Designs Hammer</ListItem>
                           <ListItem>A Designs EM-PEQ</ListItem>
                           <ListItem>Purple Audio Lil PEQR (2)</ListItem>
-                          <ListItem>Purple Audio TAV (2)</ListItem>
-                          <ListItem>Rupert Neve Designs 551 (2)</ListItem>
-                          <ListItem>SSL X-Rack E Series EQ Module (6)</ListItem>
-                          <ListItem>
-                            SSL X-Rack SuperAnalogue EQ Module (2)
-                          </ListItem>
+                          <ListItem>SSL X-Rack E Series EQ Module (2)</ListItem>
+                          <ListItem>SSL X-Rack SuperAnalogue EQ Module (2)</ListItem>
+                          <ListItem>SSL XLogic X-Rack Stereo Dynamics Module (2)</ListItem>
+                          <ListItem>SSL XLogic X-Rack Stereo G Bus Compressor Module</ListItem>
                         </UnorderedList>
                       </AccordionElement>
                       <AccordionElement title="Эффекты">
                         <UnorderedList spacing={3}>
                           <ListItem>Bricasti M7</ListItem>
-                          <ListItem>Eventide Eclipse</ListItem>
                           <ListItem>Rupert Neve Designs 542 (2)</ListItem>
                         </UnorderedList>
                       </AccordionElement>
@@ -173,7 +166,7 @@ export function AboutUsBlock() {
                       <ListItem>AKG D12</ListItem>
                       <ListItem>AKG D880</ListItem>
                       <ListItem>AKG C451B</ListItem>
-                      <ListItem>Brauner Valvet</ListItem>
+                      <ListItem>Brauner Phantom</ListItem>
                       <ListItem>Beyerdynamic M 201 TG (3)</ListItem>
                       <ListItem>Shure KSM313</ListItem>
                       <ListItem>Shure SM7B</ListItem>
@@ -225,7 +218,6 @@ export function AboutUsBlock() {
                       <ListItem>Radial JDI (2)</ListItem>
                       <ListItem>Radial EXTC (2)</ListItem>
                       <ListItem>Radial SGI (2)</ListItem>
-                      <ListItem>UAD-2 OCTO</ListItem>
                     </UnorderedList>
                   </AccordionElement>
                 </Accordion>
