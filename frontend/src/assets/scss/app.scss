@@ -579,7 +579,7 @@ Text Colors
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
+    color: transparent;
 }
 
 .text-info-gradiant {
@@ -587,7 +587,7 @@ Text Colors
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
+    color: transparent;
 }
 
 html body {
@@ -891,9 +891,8 @@ Labels
 
 .badge-xs,
 .badge-sm {
-    -webkit-transform: translate(0, -2px);
+    -webkit-transform-origin: translate(0, -2px);
     -ms-transform: translate(0, -2px);
-    -o-transform: translate(0, -2px);
     transform: translate(0, -2px);
 }
 
