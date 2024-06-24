@@ -34,7 +34,7 @@ export function Footer() {
               <a href="mailto:record@nitrojam.ru" className="link">
                 <i className="fa fa-envelope"></i>
               </a>
-              <Tooltip hasArrow label="Meta - запрещенная организация в РФ." bg='blue.800' color='white' borderRadius="5px">
+              <Tooltip hasArrow label="Meta - запрещенная организация в РФ." bg='yellow.300' color='white' borderRadius="5px">
                 <a
                   href="https://www.instagram.com/boristhenitrojam/"
                   className="link"
