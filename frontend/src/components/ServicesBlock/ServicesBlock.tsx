@@ -1,3 +1,4 @@
+import React from 'react'
 import {Container} from 'reactstrap'
 import {motion} from 'framer-motion'
 import {animationVariants} from '../../constants/animationList'
@@ -17,7 +18,14 @@ import mixingImg from '../../assets/images/landingpage/services_photos/mixing.av
 import recordingImg from '../../assets/images/landingpage/services_photos/recording.avif'
 import masteringImg from '../../assets/images/landingpage/services_photos/mastering.avif'
 
-function CardMusic({title, content, image, id}) {
+interface ServiceCardProps {
+  title: string;
+  content: React.ReactNode;
+  image: string;
+  id: string;
+}
+
+function CardMusic({title, content, image, id}: ServiceCardProps) {
   return (
     <Card
       direction={{base: 'column', md: 'row'}}

@@ -1,5 +1,6 @@
-import { Container, Row, Col } from 'reactstrap';
-import { Tooltip } from '@chakra-ui/react';
+import React from 'react'
+import { Container, Row, Col } from 'reactstrap'
+import { Tooltip } from '@chakra-ui/react'
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,7 +35,13 @@ export function Footer() {
               <a href="mailto:record@nitrojam.ru" className="link">
                 <i className="fa fa-envelope"></i>
               </a>
-              <Tooltip hasArrow label="Meta - запрещенная организация в РФ." bg='yellow.300' color='white' borderRadius="5px">
+              <Tooltip
+                hasArrow
+                label="Meta - запрещенная организация в РФ."
+                bg='yellow.300'
+                color='white'
+                borderRadius="5px"
+              >
                 <a
                   href="https://www.instagram.com/boristhenitrojam/"
                   className="link"
@@ -54,10 +61,10 @@ export function Footer() {
                 </div>
               </div>
               <div className="links ms-auto m-t-10 m-b-10">
-                <a href="/privacy" className="p-10 p-l-0 text-warning">
+                <a href="/Privacy" className="p-10 p-l-0 text-warning">
                   Политика конфиденциальности
                 </a>
-                <a href="/contact" className="p-10 text-warning">
+                <a href="/Contact" className="p-10 text-warning">
                   Контакты
                 </a>
               </div>
@@ -66,5 +73,7 @@ export function Footer() {
         </div>
       </Container>
     </div>
-  );
+  )
 }
+
+export default Footer

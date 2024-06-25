@@ -1,3 +1,4 @@
+import React from 'react'
 import { Container } from 'reactstrap'
 import { motion } from 'framer-motion'
 import { animationVariants } from '../../constants/animationList'
@@ -23,7 +24,7 @@ import photo2 from '../../assets/images/landingpage/aboutus_photos/row_photos/ph
 import photo3 from '../../assets/images/landingpage/aboutus_photos/row_photos/photo3.avif'
 import photo4 from '../../assets/images/landingpage/aboutus_photos/row_photos/photo4.avif'
 
-export function AboutUsBlock() {
+export function AboutUsBlock(): React.ReactNode {
   return (
     <>
       <Container>
@@ -78,9 +79,14 @@ export function AboutUsBlock() {
                   <i className="fa fa-instagram"></i>
                 </Button>
               </Tooltip>
-              <Button colorScheme="red" as={Link} to="/contact" onClick={() => {
-                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-              }}>
+              <Button
+                colorScheme="red"
+                as={Link}
+                to="/contact"
+                onClick={() => {
+                  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                }}
+              >
                 <i className="fa fa-envelope"></i>
               </Button>
             </div>

@@ -1,19 +1,22 @@
-import {Container} from 'reactstrap'
-import {motion} from 'framer-motion'
-import {animationVariants} from '../../constants/animationList'
-import {ContactForm} from '../../components/ContactForm/ContactForm'
+import React from 'react'
+import { Container } from 'reactstrap'
+import { motion } from 'framer-motion'
+import { animationVariants, AnimationVariant } from '../../constants/animationList'
+import { ContactForm } from '../../components/ContactForm/ContactForm'
 import css from './ContactBlock.module.scss'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-export function ContactBlock() {
+interface ContactBlockProps {}
+
+const ContactBlock: React.FC<ContactBlockProps> = () => {
   return (
     <>
       <Container>
         <motion.div
           initial="initial"
           whileInView="animate"
-          variants={animationVariants.fadeUp}
-          viewport={{once: true, amount: 0.2}}
+          variants={animationVariants.fadeUp as AnimationVariant}
+          viewport={{ once: true, amount: 0.2 }}
           className={css.main}
         >
           <div className={css.block_info}>
@@ -27,9 +30,7 @@ export function ContactBlock() {
               </div>
               <div className={css.block}>
                 <h2>Адрес</h2>
-                <p>
-                  Московская область, городской округ Химки, Поярково, дом 131
-                </p>
+                <p>Московская область, городской округ Химки, Поярково, дом 131</p>
               </div>
               <div className={css.block}>
                 <h2>Email</h2>
@@ -52,7 +53,9 @@ export function ContactBlock() {
       </Container>
       <div className={css.map}>
         <iframe
-          src={"https://yandex.ru/map-widget/v1/?lang=ru_RU&scroll=true&um=constructor%3A512334de0bbc319e88bac79433cd3b51ca7528082cb2249a8a1df15148b7040e"}
+          src={
+            'https://yandex.ru/map-widget/v1/?lang=ru_RU&scroll=true&um=constructor%3A512334de0bbc319e88bac79433cd3b51ca7528082cb2249a8a1df15148b7040e'
+          }
           allowFullScreen={true}
           style={{ border: 0 }}
         ></iframe>
@@ -60,3 +63,5 @@ export function ContactBlock() {
     </>
   )
 }
+
+export default ContactBlock

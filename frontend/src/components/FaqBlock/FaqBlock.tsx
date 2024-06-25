@@ -1,9 +1,10 @@
-import {Container} from 'reactstrap'
-import {motion} from 'framer-motion'
-import {animationVariants} from '../../constants/animationList'
+import React from 'react'
+import { Container } from 'reactstrap'
+import { motion } from 'framer-motion'
+import { animationVariants } from '../../constants/animationList'
 import css from './FaqBlock.module.scss'
-import {Accordion} from '@chakra-ui/react'
-import {AccordionElement} from '../AccordionElement/AccordionElement'
+import { Accordion } from '@chakra-ui/react'
+import { AccordionElement } from '../AccordionElement/AccordionElement';
 
 export function FaqBlock() {
   return (
@@ -12,7 +13,7 @@ export function FaqBlock() {
         initial="initial"
         whileInView="animate"
         variants={animationVariants.fadeUp}
-        viewport={{once: true, amount: 0.2}}
+        viewport={{ once: true, amount: 0.2 }}
         className={css.main}
       >
         <h2 className={css.title}>F.A.Q.</h2>
@@ -46,3 +47,4 @@ export function FaqBlock() {
   )
 }
 
+export default FaqBlock

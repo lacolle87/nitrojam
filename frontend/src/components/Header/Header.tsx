@@ -14,35 +14,35 @@ import { useLocation } from 'react-router-dom'
 import logo from '../../assets/images/logos/white-text.png'
 
 export function Header() {
-  const location = useLocation()
+  const location = useLocation();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-  }
+  };
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen)
+  const toggle = () => setIsOpen(!isOpen);
 
-  const [navBackground, setNavBackground] = useState(false)
-  const navRef = useRef()
-  navRef.current = navBackground
+  const [navBackground, setNavBackground] = useState(false);
+  const navRef = useRef(navBackground)
+  navRef.current = navBackground;
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 50
+      const show = window.scrollY > 50;
       if (navRef.current !== show) {
         setNavBackground(show)
       }
-    }
-    document.addEventListener('scroll', handleScroll)
+    };
+    document.addEventListener('scroll', handleScroll);
     return () => {
-      document.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
-    setIsOpen(false) // Закрываем меню при изменении маршрута
+    setIsOpen(false)
   }, [location])
 
   return (
@@ -50,7 +50,7 @@ export function Header() {
       <div
         className="header6"
         style={{
-          transition: '.5s ease',
+          transition: 'background-color 0.5s ease',
           backgroundColor: navBackground ? 'black' : 'transparent',
         }}
       >
@@ -72,17 +72,17 @@ export function Header() {
             >
               <Nav navbar className="ms-auto">
                 <NavItem>
-                  <Link className="nav-link" smooth to={'/'} onClick={scrollToTop}>
+                  <Link className="nav-link" smooth to={'/#top'} onClick={scrollToTop}>
                     Главная
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" smooth to={'/about_us'} onClick={scrollToTop}>
+                  <Link className="nav-link" smooth to={'/about_us#top'} onClick={scrollToTop}>
                     О нас
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" smooth to={'/services'} onClick={scrollToTop}>
+                  <Link className="nav-link" smooth to={'/services#top'} onClick={scrollToTop}>
                     Услуги
                   </Link>
                 </NavItem>
@@ -94,7 +94,7 @@ export function Header() {
               </Nav>
               <div className="act-buttons">
                 <Link
-                  to="/contact"
+                  to="/contact#top"
                   className="btn btn-warning-gradiant font-14"
                   onClick={scrollToTop}
                 >

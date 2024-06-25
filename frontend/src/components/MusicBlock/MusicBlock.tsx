@@ -1,3 +1,4 @@
+import React from 'react'
 import {HashLink as Link} from 'react-router-hash-link'
 import {Container, Row, Col} from 'reactstrap'
 import {motion} from 'framer-motion'
@@ -5,7 +6,7 @@ import {animationVariants} from '../../constants/animationList'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/scrollbar'
-import 'swiper/css/navigation';
+import 'swiper/css/navigation'
 import {Autoplay, Navigation, Scrollbar} from 'swiper/modules'
 import music_svedenie from '../../assets/images/landingpage/svedenie.avif'
 import mastering from '../../assets/images/landingpage/mastering.avif'
@@ -27,7 +28,7 @@ import slide13 from '../../assets/images/landingpage/slider_photos/slide13.avif'
 export function MusicBlock() {
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   };
 
   return (
@@ -252,3 +253,5 @@ export function MusicBlock() {
     </div>
   )
 }
+
+export default MusicBlock

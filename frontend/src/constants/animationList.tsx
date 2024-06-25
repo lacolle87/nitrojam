@@ -1,9 +1,19 @@
-export const animationVariants = {
+import { Variants } from 'framer-motion'
+
+export interface AnimationVariant extends Variants {
+  initial: { [key: string]: any }
+  animate: { [key: string]: any }
+}
+
+export interface AnimationVariants {
+  [key: string]: AnimationVariant
+}
+
+export const animationVariants: AnimationVariants = {
   toLeft: {
     initial: { scaleX: 1 },
     animate: {
       scaleX: 0,
-
       transition: { duration: 0.8 },
     },
   },
