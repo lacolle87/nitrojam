@@ -18,10 +18,10 @@ import { Link } from 'react-router-dom'
 import { AccordionElement } from '../AccordionElement/AccordionElement'
 
 import logo from '../../assets/images/landingpage/aboutus_photos/logobig.png'
-import photo1 from '../../assets/images/landingpage/aboutus_photos/row_photos/photo1.jpg'
-import photo2 from '../../assets/images/landingpage/aboutus_photos/row_photos/photo2.jpg'
-import photo3 from '../../assets/images/landingpage/aboutus_photos/row_photos/photo3.jpg'
-import photo4 from '../../assets/images/landingpage/aboutus_photos/row_photos/photo4.jpg'
+import photo1 from '../../assets/images/landingpage/aboutus_photos/row_photos/photo1.avif'
+import photo2 from '../../assets/images/landingpage/aboutus_photos/row_photos/photo2.avif'
+import photo3 from '../../assets/images/landingpage/aboutus_photos/row_photos/photo3.avif'
+import photo4 from '../../assets/images/landingpage/aboutus_photos/row_photos/photo4.avif'
 
 export function AboutUsBlock() {
   return (

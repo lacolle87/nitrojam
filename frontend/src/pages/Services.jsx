@@ -1,7 +1,7 @@
 import {PageBanner} from '../components/PageBanner/PageBanner'
 import {FaqBlock} from '../components/FaqBlock/FaqBlock'
 import {ServicesBlock} from '../components/ServicesBlock/ServicesBlock'
-import ServicesBanner from '../assets/images/landingpage/banners/services_banner.jpg'
+import ServicesBanner from '../assets/images/landingpage/banners/services_banner.avif'
 
 export function ServicesPage() {
   return (

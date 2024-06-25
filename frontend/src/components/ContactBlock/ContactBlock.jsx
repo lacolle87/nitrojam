@@ -54,7 +54,7 @@ export function ContactBlock() {
         <iframe
           src={"https://yandex.ru/map-widget/v1/?lang=ru_RU&scroll=true&um=constructor%3A512334de0bbc319e88bac79433cd3b51ca7528082cb2249a8a1df15148b7040e"}
           allowFullScreen={true}
-          frameBorder={"0"}
+          style={{ border: 0 }}
         ></iframe>
       </div>
     </>

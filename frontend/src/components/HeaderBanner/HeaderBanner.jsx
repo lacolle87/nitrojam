@@ -3,7 +3,7 @@ import {Container, Row, Col} from 'reactstrap'
 import {motion} from 'framer-motion'
 import {animationVariants} from '../../constants/animationList'
 
-import bannerbg from "../../assets/images/landingpage/banner-bg.jpg"
+import bannerbg from "../../assets/images/landingpage/banner-bg.avif"
 
 export function HeaderBanner() {
   return (

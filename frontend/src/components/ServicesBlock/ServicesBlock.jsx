@@ -13,9 +13,9 @@ import {
   Text,
 } from '@chakra-ui/react'
 import {Link} from 'react-router-dom'
-import mixingImg from '../../assets/images/landingpage/services_photos/mixing.jpg'
-import recordingImg from '../../assets/images/landingpage/services_photos/recording.jpg'
-import masteringImg from '../../assets/images/landingpage/services_photos/mastering.jpg'
+import mixingImg from '../../assets/images/landingpage/services_photos/mixing.avif'
+import recordingImg from '../../assets/images/landingpage/services_photos/recording.avif'
+import masteringImg from '../../assets/images/landingpage/services_photos/mastering.avif'
 
 function CardMusic({title, content, image, id}) {
   return (
