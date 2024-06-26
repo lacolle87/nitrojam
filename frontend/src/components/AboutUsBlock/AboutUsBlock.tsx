@@ -24,7 +24,7 @@ import photo2 from '../../assets/images/landingpage/aboutus_photos/row_photos/ph
 import photo3 from '../../assets/images/landingpage/aboutus_photos/row_photos/photo3.avif'
 import photo4 from '../../assets/images/landingpage/aboutus_photos/row_photos/photo4.avif'
 
-export function AboutUsBlock(): React.ReactNode {
+export const AboutUsBlock: React.FC = (): React.JSX.Element | null => {
   return (
     <>
       <Container>
