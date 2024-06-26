@@ -31,14 +31,14 @@ File: scss
 @media(min-width:1024px) {
     .contact4 {
         .contact-box {
-            padding: 80px 105px 80px 0px;
+            padding: 80px 105px 80px 0;
         }
     } 
     .hover-dropdown .navbar-nav {
         > .dropdown:hover {
             > .dropdown-menu {
                 display: block;
-                margin-top: 0px;
+                margin-top: 0;
                 
             }
         }
@@ -47,7 +47,7 @@ File: scss
         > .dropdown {
              .dropdown-menu {
                 min-width: 210px;
-                margin-top: 0px;
+                margin-top: 0;
             }
         }
     }
@@ -92,7 +92,7 @@ File: scss
     }
     .contact4 {
         .contact-box {
-            padding: 40px 0px 40px 0px;
+            padding: 40px 0 40px 0;
         }
     }
     .contact3 {
@@ -156,8 +156,8 @@ File: scss
 @media(max-width:767px) {
     /*This is for the Global*/
     .b-l, .b-r{
-        border-left: 0px;
-        border-right: 0px;
+        border-left: 0;
+        border-right: 0;
         border-bottom: 1px solid $border;
     }
     .img-inline{
@@ -180,12 +180,12 @@ File: scss
     }
     /*This is for the feature 12*/
     .wrap-feature-12 .uneven-box{
-        margin-top: 0px;
+        margin-top: 0;
     }
     /*This is for the feature 16*/
     .wrap-feature-16{
         .with-text{
-            margin-left: 0px;
+            margin-left: 0;
         }
     }
     /*This is for the feature 18*/
@@ -195,7 +195,7 @@ File: scss
     }
     /*This is for the feature 22*/
     .wrap-feature-22 .text-box, .wrap-feature23-box .text-box{
-        padding: 20px 0px;
+        padding: 20px 0;
     }
     .wrap-feature30-box{
         position: relative;

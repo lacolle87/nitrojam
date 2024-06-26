@@ -8,7 +8,7 @@ import 'swiper/css'
 import 'swiper/css/scrollbar'
 import 'swiper/css/navigation'
 import {Autoplay, Navigation, Scrollbar} from 'swiper/modules'
-import music_svedenie from '../../assets/images/landingpage/svedenie.avif'
+import mixing from '../../assets/images/landingpage/svedenie.avif'
 import mastering from '../../assets/images/landingpage/mastering.avif'
 import record from '../../assets/images/landingpage/record.avif'
 import slide1 from '../../assets/images/landingpage/slider_photos/slide1.avif'
@@ -43,7 +43,7 @@ export function MusicBlock() {
             <Col xl="4" lg="6" md="12">
               <div className="music-block-main mt-3">
                 <Link to="/services#mixing">
-                  <img src={music_svedenie} alt="" />
+                  <img src={mixing} alt="" />
                   <div className="music-block-content" data-toggle="collapse">
                     <p className="music-block-text">
                       Сведение
@@ -202,6 +202,7 @@ export function MusicBlock() {
             disableOnInteraction: false,
           }}
           loop={true}
+          preloadImages={false}
           scrollbar={{
             hide: true,
           }}
