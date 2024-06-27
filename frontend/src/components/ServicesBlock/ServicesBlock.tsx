@@ -14,9 +14,8 @@ import {
   Text,
 } from '@chakra-ui/react'
 import {Link} from 'react-router-dom'
-import mixingImg from '../../assets/images/landingpage/services_photos/mixing.avif'
-import recordingImg from '../../assets/images/landingpage/services_photos/recording.avif'
-import masteringImg from '../../assets/images/landingpage/services_photos/mastering.avif'
+
+import useImage from '../../services/useImage'
 
 interface ServiceCardProps {
   title: string;
@@ -72,6 +71,10 @@ function CardMusic({title, content, image, id}: ServiceCardProps) {
 }
 
 export function ServicesBlock() {
+  const mixing = useImage('main', 'mixing.avif')
+  const mastering = useImage('main', 'mastering.avif')
+  const recording = useImage('main', 'record.avif')
+
   return (
     <Container>
       <motion.div
@@ -99,7 +102,7 @@ export function ServicesBlock() {
                 </Text>
               </>
             }
-            image={mixingImg}
+            image={mixing}
           />
           <CardMusic
             title="Запись"
@@ -117,7 +120,7 @@ export function ServicesBlock() {
                 </Text>
               </>
             }
-            image={recordingImg}
+            image={recording}
           />
           <CardMusic
             title="Мастеринг"
@@ -130,7 +133,7 @@ export function ServicesBlock() {
                 </Text>
               </>
             }
-            image={masteringImg}
+            image={mastering}
           />
         </div>
       </motion.div>

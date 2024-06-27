@@ -8,24 +8,26 @@ import 'swiper/css'
 import 'swiper/css/scrollbar'
 import 'swiper/css/navigation'
 import {Autoplay, Navigation, Scrollbar} from 'swiper/modules'
-import mixing from '../../assets/images/landingpage/svedenie.avif'
-import mastering from '../../assets/images/landingpage/mastering.avif'
-import record from '../../assets/images/landingpage/record.avif'
-import slide1 from '../../assets/images/landingpage/slider_photos/slide1.avif'
-import slide2 from '../../assets/images/landingpage/slider_photos/slide2.avif'
-import slide3 from '../../assets/images/landingpage/slider_photos/slide3.avif'
-import slide4 from '../../assets/images/landingpage/slider_photos/slide4.avif'
-import slide5 from '../../assets/images/landingpage/slider_photos/slide5.avif'
-import slide6 from '../../assets/images/landingpage/slider_photos/slide6.avif'
-import slide7 from '../../assets/images/landingpage/slider_photos/slide7.avif'
-import slide8 from '../../assets/images/landingpage/slider_photos/slide8.avif'
-import slide9 from '../../assets/images/landingpage/slider_photos/slide9.avif'
-import slide10 from '../../assets/images/landingpage/slider_photos/slide10.avif'
-import slide11 from '../../assets/images/landingpage/slider_photos/slide11.avif'
-import slide12 from '../../assets/images/landingpage/slider_photos/slide12.avif'
-import slide13 from '../../assets/images/landingpage/slider_photos/slide13.avif'
+
+import useImage from '../../services/useImage'
 
 export function MusicBlock() {
+  const mixing = useImage('main', 'mixing.avif')
+  const mastering = useImage('main', 'mastering.avif')
+  const recording = useImage('main', 'record.avif')
+  const slide1 = useImage('slider_photos', 'slide1.avif')
+  const slide2 = useImage('slider_photos', 'slide2.avif')
+  const slide3 = useImage('slider_photos', 'slide3.avif')
+  const slide4 = useImage('slider_photos', 'slide4.avif')
+  const slide5 = useImage('slider_photos', 'slide5.avif')
+  const slide6 = useImage('slider_photos', 'slide6.avif')
+  const slide7 = useImage('slider_photos', 'slide7.avif')
+  const slide8 = useImage('slider_photos', 'slide8.avif')
+  const slide9 = useImage('slider_photos', 'slide9.avif')
+  const slide10 = useImage('slider_photos', 'slide10.avif')
+  const slide11 = useImage('slider_photos', 'slide11.avif')
+  const slide12 = useImage('slider_photos', 'slide12.avif')
+  const slide13 = useImage('slider_photos', 'slide13.avif')
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
@@ -67,7 +69,7 @@ export function MusicBlock() {
             <Col xl="4" lg="6" md="12">
               <div className="music-block-main mt-3">
                 <Link to="/services#mastering">
-                  <img src={record} alt="" />
+                  <img src={recording} alt="" />
                   <div className="music-block-content">
                     <p className="music-block-text">
                       Мастеринг
