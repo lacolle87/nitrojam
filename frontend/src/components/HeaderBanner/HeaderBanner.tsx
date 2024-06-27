@@ -1,25 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 import { Container, Row, Col } from 'reactstrap'
 import { motion } from 'framer-motion'
 import { animationVariants } from '../../constants/animationList'
-import {getImage} from '../../services/imageService'
+import useImage from '../../services/useImage'
+
 
 export function HeaderBanner() {
-  const [bannerbg, setBackgroundImageUrl] = useState<string>('');
+  const bannerbg = useImage('main', 'banner-bg.avif');
 
-  useEffect(() => {
-    const fetchBackgroundImage = async () => {
-      try {
-        const imageUrl = await getImage('main', 'banner-bg.avif');
-        setBackgroundImageUrl(imageUrl);
-      } catch (error) {
-        console.error('Failed to fetch background image:', error);
-      }
-    };
-
-    fetchBackgroundImage();
-  }, []);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   };
