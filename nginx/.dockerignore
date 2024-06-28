@@ -4,3 +4,5 @@
 .gitignore
 Dockerfile
 .editorconfig
+.env
+.dockerignore

@@ -29,3 +29,5 @@ yarn-error.log*
 /.idea/vcs.xml
 /frontend/node_modules/
 /docker-compose.dev.yml
+
+.env

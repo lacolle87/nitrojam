@@ -4,3 +4,4 @@
 /.idea/vcs.xml
 /images/
 /logs/
+.env

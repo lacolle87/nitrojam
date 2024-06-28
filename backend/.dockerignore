@@ -11,3 +11,6 @@ powerpc/
 mips/
 /images/
 /logs/
+.env
+.dockerignore
+.gitignore
