@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://nitrojamrec.ru';
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://nitrojamrec.ru';
 
 export const fetchImageUrl = async (directory: string, imageName: string): Promise<string> => {
   try {
