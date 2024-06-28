@@ -26,6 +26,8 @@ func GetImage(c *gin.Context) {
 		cachedData = imageData
 	}
 
+	c.Header("Cache-Control", "public, max-age=3600")
+
 	c.Data(http.StatusOK, "image/jpeg", cachedData)
 }
 
