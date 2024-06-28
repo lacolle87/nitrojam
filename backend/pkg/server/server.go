@@ -12,7 +12,7 @@ func SetupRouter() *gin.Engine {
 
 	gin.SetMode(gin.ReleaseMode)
 
-	r.Use(corsMiddleware)
+	//r.Use(corsMiddleware)
 
 	r.GET("/api/images/:directory/:imageName", handlers.GetImage)
 
