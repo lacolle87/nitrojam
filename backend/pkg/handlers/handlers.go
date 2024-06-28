@@ -9,7 +9,7 @@ import (
 func GetImage(c *gin.Context) {
 	directory := c.Param("directory")
 	imageName := c.Param("imageName")
-	imagePath := filepath.Join("./images/landingpage", directory, imageName)
+	imagePath := filepath.Join("./images/", directory, imageName)
 
 	_, err := filepath.Abs(imagePath)
 	if err != nil {

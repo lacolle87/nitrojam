@@ -5,14 +5,18 @@ volumes:
 
 services:
   backend:
-    image: registry.gitlab.com/lacolle87/cr/nitrojam_backend:latest
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     volumes:
       - ./backend/images:/app/images/
       - ./logs:/app/logs
 
 
   frontend:
-    image: registry.gitlab.com/lacolle87/cr/nitrojam_frontend:latest
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     volumes:
       - static:/app/result_build
     command: /bin/sh -c "cp -r /app/build/. /app/result_build/"
@@ -20,7 +24,9 @@ services:
       - backend
 
   nginx:
-    image: registry.gitlab.com/lacolle87/cr/nitrojam_nginx:latest
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
     restart: always
     ports:
       - "9000:80"

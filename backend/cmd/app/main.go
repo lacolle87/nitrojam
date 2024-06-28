@@ -2,6 +2,7 @@ package main
 
 import (
 	"backend/pkg/handlers"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -9,8 +10,10 @@ import (
 func main() {
 	r := gin.Default()
 
+	gin.SetMode(gin.ReleaseMode)
+
 	corsMiddleware := func(c *gin.Context) {
-		c.Header("Access-Control-Allow-Origin", "http://localhost:3000")
+		c.Header("Access-Control-Allow-Origin", "http://127.0.0.1:9000")
 		c.Header("Access-Control-Allow-Methods", "GET")
 		c.Header("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 
@@ -26,6 +29,8 @@ func main() {
 
 	r.GET("/api/images/:directory/:imageName", handlers.GetImage)
 
-	// Start the server
-	r.Run(":8090")
+	err := r.Run(":8090")
+	if err != nil {
+		fmt.Println("Bad bad")
+	}
 }

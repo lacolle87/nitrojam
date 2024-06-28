@@ -1,13 +1,13 @@
-import React from 'react'
-import {HashLink as Link} from 'react-router-hash-link'
-import {Container, Row, Col} from 'reactstrap'
-import {motion} from 'framer-motion'
-import {animationVariants} from '../../constants/animationList'
-import {Swiper, SwiperSlide} from 'swiper/react'
+import React, { useEffect } from 'react'
+import { HashLink as Link } from 'react-router-hash-link'
+import { Container, Row, Col } from 'reactstrap'
+import { motion } from 'framer-motion'
+import { animationVariants } from '../../constants/animationList'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/scrollbar'
 import 'swiper/css/navigation'
-import {Autoplay, Navigation, Scrollbar} from 'swiper/modules'
+import { Autoplay, Navigation, Scrollbar } from 'swiper/modules'
 
 import useImage from '../../services/useImage'
 
@@ -28,6 +28,14 @@ export function MusicBlock() {
   const slide11 = useImage('slider_photos', 'slide11.avif')
   const slide12 = useImage('slider_photos', 'slide12.avif')
   const slide13 = useImage('slider_photos', 'slide13.avif')
+
+  const bgOverlay = useImage('main', 'bg-overlay.avif')
+
+  useEffect(() => {
+    if (bgOverlay) {
+      document.documentElement.style.setProperty('--background-parallax', `url(${bgOverlay})`);
+    }
+  }, [bgOverlay]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })

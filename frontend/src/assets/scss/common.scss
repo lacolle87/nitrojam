@@ -222,7 +222,7 @@ Header 6
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-image: $background-parallax;
+    background-image: var(--background-parallax, none);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -1543,7 +1543,6 @@ Custom-select
 ******************/
 
 .custom-select {
-    background: url(../../assets/images/ui/custom-select.png) right .75rem center no-repeat;
     border: 2px solid $border;
     height: calc(2.25rem + 12px);
 }
@@ -1575,10 +1574,6 @@ textarea {
     color: $success;
 }
 
-.has-success .form-control-success {
-    background-image: url(../../assets/images/ui/success.svg);
-}
-
 .has-success .form-control {
     border-color: $success;
 }
@@ -1591,10 +1586,6 @@ textarea {
     color: $warning;
 }
 
-.has-warning .form-control-warning {
-    background-image: url(../../assets/images/ui/warning.svg);
-}
-
 .has-warning .form-control {
     border-color: $warning;
 }
@@ -1605,10 +1596,6 @@ textarea {
 .has-danger .form-control-feedback,
 .has-danger .form-control-label {
     color: $danger;
-}
-
-.has-danger .form-control-danger {
-    background-image: url(../../assets/images/ui/danger.svg);
 }
 
 .has-danger .form-control {
