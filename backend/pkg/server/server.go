@@ -12,15 +12,15 @@ func SetupRouter() *gin.Engine {
 
 	gin.SetMode(gin.ReleaseMode)
 
-	//r.Use(corsMiddleware)
+	r.Use(corsMiddleware)
 
-	r.GET("/api/images/:directory/:imageName", handlers.GetImage)
+	r.GET("/nj_api/images/:directory/:imageName", handlers.GetImage)
 
 	return r
 }
 
 func corsMiddleware(c *gin.Context) {
-	c.Header("Access-Control-Allow-Origin", "https://localhost:9000")
+	c.Header("Access-Control-Allow-Origin", "https://nitrojamrec.ru")
 	c.Header("Access-Control-Allow-Methods", "GET")
 	c.Header("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 
