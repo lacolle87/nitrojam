@@ -20,8 +20,8 @@ func SetupRouter() *gin.Engine {
 }
 
 func corsMiddleware(c *gin.Context) {
-	c.Header("Access-Control-Allow-Origin", "http://nitrojamrec.ru")
-	c.Header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE")
+	c.Header("Access-Control-Allow-Origin", "http://localhost:9000")
+	c.Header("Access-Control-Allow-Methods", "GET")
 	c.Header("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 
 	if c.Request.Method == "OPTIONS" {
