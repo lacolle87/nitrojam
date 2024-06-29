@@ -15,6 +15,7 @@ services:
   frontend:
     image: registry.gitlab.com/lacolle87/cr/nitrojam_frontend:latest
     volumes:
+      - ./frontend/.env:/app/.env:ro
       - static:/app/result_build
     command: /bin/sh -c "cp -r /app/build/. /app/result_build/"
     depends_on:

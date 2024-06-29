@@ -1,22 +1,32 @@
-import axios from 'axios'
+import axios, { AxiosResponse } from 'axios'
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || ''
 
-export const fetchImageUrl = async (directory: string, imageName: string): Promise<string> => {
+const imageUrlCache: Record<string, string> = {};
+
+
+export const fetchImageUrl = async (
+  directory: string,
+  imageName: string
+): Promise<string> => {
   try {
     const url = `${API_BASE_URL}/nj_api/images/${directory}/${imageName}`
-    console.log(`Fetching image from ${url}`)
 
-    const response = await axios.get(url, {
+    if (imageUrlCache[url]) {
+      return imageUrlCache[url]
+    }
+
+    const response: AxiosResponse<Blob> = await axios.get(url, {
       responseType: 'blob',
       headers: {
         'Accept': 'image/*',
       },
-    });
+    })
 
     console.log("Response received", response)
 
-    return URL.createObjectURL(response.data)
+    imageUrlCache[url] = URL.createObjectURL(new Blob([response.data]))
+    return imageUrlCache[url];
   } catch (error) {
     console.error('Error fetching image:', error)
     throw error
