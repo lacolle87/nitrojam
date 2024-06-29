@@ -31,3 +31,4 @@ yarn-error.log*
 /docker-compose.dev.yml
 
 .env
+/logs/

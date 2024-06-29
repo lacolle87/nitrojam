@@ -5,3 +5,4 @@
 Dockerfile
 .editorconfig
 .env
+/logs

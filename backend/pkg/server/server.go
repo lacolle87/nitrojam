@@ -4,6 +4,7 @@ import (
 	"backend/pkg/handlers"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"log/slog"
 	"net/http"
 	"os"
 )
@@ -34,5 +35,6 @@ func corsMiddleware(c *gin.Context) {
 }
 
 func StartServer(r *gin.Engine, port string) error {
+	slog.Info("Starting server on port " + port)
 	return r.Run(fmt.Sprintf(":%s", port))
 }

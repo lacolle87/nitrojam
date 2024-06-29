@@ -34,10 +34,11 @@ func LoadLogger(fileName string) {
 		MaxAge:     7,        // Max days to retain old log files
 		Compress:   true,     // Compress rotated log files
 	}
+
 	multiWriter := io.MultiWriter(os.Stdout, logFile)
 	logger := slog.New(slog.NewTextHandler(multiWriter, nil))
 
-	gin.DefaultWriter = multiWriter
-
 	slog.SetDefault(logger)
+
+	gin.DefaultWriter = multiWriter
 }
