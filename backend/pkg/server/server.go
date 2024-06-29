@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"os"
 )
 
 func SetupRouter() *gin.Engine {
@@ -20,7 +21,7 @@ func SetupRouter() *gin.Engine {
 }
 
 func corsMiddleware(c *gin.Context) {
-	c.Header("Access-Control-Allow-Origin", "https://nitrojamrec.ru")
+	c.Header("Access-Control-Allow-Origin", os.Getenv("CORS_ORIGIN"))
 	c.Header("Access-Control-Allow-Methods", "GET")
 	c.Header("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 
