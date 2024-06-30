@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 import { Container, Row, Col } from 'reactstrap'
 import { motion } from 'framer-motion'
@@ -11,23 +11,16 @@ import { Autoplay, Navigation, Scrollbar } from 'swiper/modules'
 
 import useImage from '../../services/useImage'
 
+type Slide = {
+  url: string;
+};
+
 export function MusicBlock() {
   const mixing = useImage('main', 'mixing.avif')
   const mastering = useImage('main', 'mastering.avif')
   const recording = useImage('main', 'record.avif')
-  const slide1 = useImage('slider_photos', 'slide1.avif')
-  const slide2 = useImage('slider_photos', 'slide2.avif')
-  const slide3 = useImage('slider_photos', 'slide3.avif')
-  const slide4 = useImage('slider_photos', 'slide4.avif')
-  const slide5 = useImage('slider_photos', 'slide5.avif')
-  const slide6 = useImage('slider_photos', 'slide6.avif')
-  const slide7 = useImage('slider_photos', 'slide7.avif')
-  const slide8 = useImage('slider_photos', 'slide8.avif')
-  const slide9 = useImage('slider_photos', 'slide9.avif')
-  const slide10 = useImage('slider_photos', 'slide10.avif')
-  const slide11 = useImage('slider_photos', 'slide11.avif')
-  const slide12 = useImage('slider_photos', 'slide12.avif')
-  const slide13 = useImage('slider_photos', 'slide13.avif')
+
+  const [slides, setSlides] = useState<Slide[]>([]);
 
   const bgOverlay = useImage('main', 'bg-overlay.avif')
 
@@ -36,6 +29,19 @@ export function MusicBlock() {
       document.documentElement.style.setProperty('--background-parallax', `url(${bgOverlay})`);
     }
   }, [bgOverlay]);
+
+  useEffect(() => {
+    const fetchSlides = async () => {
+      try {
+        const response = await fetch('/nj_api/slides');
+        const data: Slide[] = await response.json();
+        setSlides(data);
+      } catch (error) {
+        console.error('Error fetching slides:', error);
+      }
+    };
+    fetchSlides();
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
@@ -212,7 +218,7 @@ export function MusicBlock() {
             disableOnInteraction: false,
           }}
           loop={true}
-          preloadImages={false}
+          preloadImages={false}  // This prop is causing the warning
           scrollbar={{
             hide: true,
           }}
@@ -220,45 +226,11 @@ export function MusicBlock() {
           navigation={true}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <img src={slide1} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide2} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide3} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide4} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide5} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide6} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide7} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide8} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide9} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide10} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide11} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide12} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide13} alt="" />
-          </SwiperSlide>
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <img src={slide.url} alt={`Slide ${index + 1}`} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </Container>
     </div>
