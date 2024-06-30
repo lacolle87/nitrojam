@@ -213,24 +213,24 @@ export function MusicBlock() {
 
       <Container className="swiperContainer">
         <Swiper
+          slidesPerView={1}
+          loop={true}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
-          loop={true}
-          preloadImages={false}  // This prop is causing the warning
-          scrollbar={{
-            hide: true,
-          }}
-          modules={[Autoplay, Scrollbar, Navigation]}
+          modules={[ Autoplay, Navigation, Scrollbar ]}
           navigation={true}
           className="mySwiper"
+          preloadImages={true}
         >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <img src={slide.url} alt={`Slide ${index + 1}`} />
-            </SwiperSlide>
-          ))}
+          <Swiper initialSlide={-1} spaceBetween={50} slidesPerView={1}>
+            {slides.map((slide, index) => (
+              <SwiperSlide key={index}>
+                <img src={slide.url} alt={`Slide ${index + 1}`} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </Swiper>
       </Container>
     </div>
