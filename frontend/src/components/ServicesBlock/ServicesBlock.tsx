@@ -18,10 +18,10 @@ import {Link} from 'react-router-dom'
 import useImage from '../../services/useImage'
 
 interface ServiceCardProps {
-  title: string;
-  content: React.ReactNode;
-  image: string;
-  id: string;
+  title: string
+  content: React.ReactNode
+  image: string
+  id: string
 }
 
 function CardMusic({title, content, image, id}: ServiceCardProps) {
@@ -58,7 +58,7 @@ function CardMusic({title, content, image, id}: ServiceCardProps) {
             border="2px"
             borderColor="yellow.500"
             onClick={() => {
-              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
             }}
             _hover={{bg: '#f9c349', color: '#000000'}}
           >

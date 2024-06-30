@@ -12,8 +12,6 @@ import (
 func SetupRouter() *gin.Engine {
 	r := gin.Default()
 
-	gin.SetMode(gin.ReleaseMode)
-
 	r.Use(corsMiddleware)
 
 	r.GET("/nj_api/images/:directory/:imageName", handlers.GetImage)
