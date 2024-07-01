@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react'
 import {Link} from 'react-router-dom'
 
-import useImage from '../../services/useImage'
+import UseImage from '../../services/UseImage'
 
 interface ServiceCardProps {
   title: string
@@ -71,9 +71,9 @@ function CardMusic({title, content, image, id}: ServiceCardProps) {
 }
 
 export function ServicesBlock() {
-  const mixing = useImage('main', 'mixing.avif')
-  const mastering = useImage('main', 'mastering.avif')
-  const recording = useImage('main', 'record.avif')
+  const mixing = UseImage('main', 'mixing.avif')
+  const mastering = UseImage('main', 'mastering.avif')
+  const recording = UseImage('main', 'record.avif')
 
   return (
     <Container>

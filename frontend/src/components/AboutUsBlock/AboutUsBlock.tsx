@@ -18,14 +18,14 @@ import {
 import { Link } from 'react-router-dom'
 import { AccordionElement } from '../AccordionElement/AccordionElement'
 
-import useImage from '../../services/useImage'
+import UseImage from '../../services/UseImage'
 
 export const AboutUsBlock: React.FC = (): React.JSX.Element | null => {
-  const logo = useImage('aboutus_photos', 'logobig.png')
-  const photo1 = useImage('aboutus_photos', 'photo1.avif')
-  const photo2 = useImage('aboutus_photos', 'photo2.avif')
-  const photo3 = useImage('aboutus_photos', 'photo3.avif')
-  const photo4 = useImage('aboutus_photos', 'photo4.avif')
+  const logo = UseImage('aboutus_photos', 'logobig.png')
+  const photo1 = UseImage('aboutus_photos', 'photo1.avif')
+  const photo2 = UseImage('aboutus_photos', 'photo2.avif')
+  const photo3 = UseImage('aboutus_photos', 'photo3.avif')
+  const photo4 = UseImage('aboutus_photos', 'photo4.avif')
   return (
     <>
       <Container>

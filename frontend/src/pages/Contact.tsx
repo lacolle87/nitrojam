@@ -3,10 +3,10 @@ import PageBanner from '../components/PageBanner/PageBanner'
 import { FaqBlock } from '../components/FaqBlock/FaqBlock'
 import ContactBlock from '../components/ContactBlock/ContactBlock'
 
-import useImage from '../services/useImage'
+import UseImage from '../services/UseImage'
 
 const ContactPage: React.FC = () => {
-  const contactBanner = useImage('banners', 'contact_banner.avif')
+  const contactBanner = UseImage('banners', 'contact_banner.avif')
 
   return (
     <>

@@ -3,11 +3,11 @@ import { HashLink as Link } from 'react-router-hash-link'
 import { Container, Row, Col } from 'reactstrap'
 import { motion } from 'framer-motion'
 import { animationVariants } from '../../constants/animationList'
-import useImage from '../../services/useImage'
+import UseImage from '../../services/UseImage'
 
 
 export function HeaderBanner() {
-  const bannerbg = useImage('main', 'banner-bg.avif');
+  const bannerbg = UseImage('main', 'banner-bg.avif');
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })

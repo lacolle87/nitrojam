@@ -11,11 +11,10 @@ import {
 } from 'reactstrap'
 import { useLocation } from 'react-router-dom'
 
-import logo from '../../../../backend/images/landingpage/logos/white-text.png'
-import useImage from '../../services/useImage'
+import UseImage from '../../services/UseImage'
 
 export function Header() {
-  const logo = useImage('logos', 'white-text.png')
+  const logo = UseImage('logos', 'white-text.png')
   const location = useLocation();
 
   const scrollToTop = () => {
