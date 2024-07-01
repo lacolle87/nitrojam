@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { fetchImageUrl } from './imageService'
+import { fetchImageUrl } from './ImageService'
 
-function useImage(directory: string, imageName: string): string {
+function UseImage(directory: string, imageName: string): string {
   const [imageUrl, setImageUrl] = useState<string>('')
 
   useEffect(() => {
@@ -20,4 +20,4 @@ function useImage(directory: string, imageName: string): string {
   return imageUrl
 }
 
-export default useImage;
+export default UseImage;

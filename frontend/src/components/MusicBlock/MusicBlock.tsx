@@ -5,29 +5,29 @@ import { motion } from 'framer-motion'
 import { animationVariants } from '../../constants/animationList'
 import Slider from '../../components/Slider/Slider'
 
-import useImage from '../../services/useImage'
+import UseImage from '../../services/UseImage'
 
 export function MusicBlock() {
-  const mixing = useImage('main', 'mixing.avif')
-  const mastering = useImage('main', 'mastering.avif')
-  const recording = useImage('main', 'record.avif')
+  const mixing = UseImage('main', 'mixing.avif')
+  const mastering = UseImage('main', 'mastering.avif')
+  const recording = UseImage('main', 'record.avif')
   const slideImages = [
-    useImage('slider_photos', 'slide1.avif'),
-    useImage('slider_photos', 'slide2.avif'),
-    useImage('slider_photos', 'slide3.avif'),
-    useImage('slider_photos', 'slide4.avif'),
-    useImage('slider_photos', 'slide5.avif'),
-    useImage('slider_photos', 'slide6.avif'),
-    useImage('slider_photos', 'slide7.avif'),
-    useImage('slider_photos', 'slide8.avif'),
-    useImage('slider_photos', 'slide9.avif'),
-    useImage('slider_photos', 'slide10.avif'),
-    useImage('slider_photos', 'slide11.avif'),
-    useImage('slider_photos', 'slide12.avif'),
-    useImage('slider_photos', 'slide13.avif'),
+    UseImage('slider_photos', 'slide1.avif'),
+    UseImage('slider_photos', 'slide2.avif'),
+    UseImage('slider_photos', 'slide3.avif'),
+    UseImage('slider_photos', 'slide4.avif'),
+    UseImage('slider_photos', 'slide5.avif'),
+    UseImage('slider_photos', 'slide6.avif'),
+    UseImage('slider_photos', 'slide7.avif'),
+    UseImage('slider_photos', 'slide8.avif'),
+    UseImage('slider_photos', 'slide9.avif'),
+    UseImage('slider_photos', 'slide10.avif'),
+    UseImage('slider_photos', 'slide11.avif'),
+    UseImage('slider_photos', 'slide12.avif'),
+    UseImage('slider_photos', 'slide13.avif'),
   ];
 
-  const bgOverlay = useImage('main', 'bg-overlay.avif')
+  const bgOverlay = UseImage('main', 'bg-overlay.avif')
 
   useEffect(() => {
     if (bgOverlay) {
