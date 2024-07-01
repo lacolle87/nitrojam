@@ -17,7 +17,6 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
         disableOnInteraction: false,
       }}
       loop={true}
-      preloadImages={false}
       scrollbar={{
         hide: true,
       }}
