@@ -25,3 +25,5 @@ export function SliderBlock() {
   </Container>
 )
 }
+
+export default SliderBlock

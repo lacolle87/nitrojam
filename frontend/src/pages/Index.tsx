@@ -1,18 +1,19 @@
-import React from 'react'
-import { HeaderBanner } from '../components/HeaderBanner/HeaderBanner'
-import MusicBlock from '../components/MusicBlock/MusicBlock'
-import Special from '../components/Special/Special'
-import {SliderBlock} from '../components/Slider/SliderBlock'
+import React, { Suspense } from 'react';
+
+const HeaderBanner = React.lazy(() => import('../components/HeaderBanner/HeaderBanner').then(module => ({ default: module.default })));
+const MusicBlock = React.lazy(() => import('../components/MusicBlock/MusicBlock').then(module => ({ default: module.default })));
+const Special = React.lazy(() => import('../components/Special/Special').then(module => ({ default: module.default })));
+const SliderBlock = React.lazy(() => import('../components/Slider/SliderBlock').then(module => ({ default: module.default })));
 
 export const IndexPage: React.FC = () => {
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <HeaderBanner />
       <MusicBlock />
       <Special />
       <SliderBlock />
-    </>
-  )
+    </Suspense>
+  );
 }
 
-export default IndexPage
+export default IndexPage;

@@ -46,3 +46,5 @@ export function HeaderBanner() {
     </motion.div>
   )
 }
+
+export default HeaderBanner
