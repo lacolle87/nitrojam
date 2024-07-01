@@ -1,11 +1,15 @@
 @import 'variable';
-/******************* 
-This is the font import from the google api 
-*******************/
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800');
+
 /******************* 
 Global Styles 
 *******************/
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../../public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     outline: none;
@@ -81,7 +85,7 @@ h6 {
 
 h1 {
     line-height: 40px;
-    font-size: 36px
+    font-size: 38px
 }
 
 h2 {
