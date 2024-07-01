@@ -13,13 +13,11 @@ import { useLocation } from 'react-router-dom'
 
 import UseImage from '../../services/UseImage'
 
+import scrollToTop from '../ScrollToTop/ScrollToTop'
+
 export function Header() {
   const logo = UseImage('logos', 'white-text.png')
   const location = useLocation();
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-  };
 
   const [isOpen, setIsOpen] = useState(false);
 

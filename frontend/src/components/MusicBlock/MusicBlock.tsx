@@ -3,29 +3,15 @@ import { HashLink as Link } from 'react-router-hash-link'
 import { Container, Row, Col } from 'reactstrap'
 import { motion } from 'framer-motion'
 import { animationVariants } from '../../constants/animationList'
-import Slider from '../../components/Slider/Slider'
 
 import UseImage from '../../services/UseImage'
+
+import scrollToTop from '../ScrollToTop/ScrollToTop'
 
 export function MusicBlock() {
   const mixing = UseImage('main', 'mixing.avif')
   const mastering = UseImage('main', 'mastering.avif')
   const recording = UseImage('main', 'record.avif')
-  const slideImages = [
-    UseImage('slider_photos', 'slide1.avif'),
-    UseImage('slider_photos', 'slide2.avif'),
-    UseImage('slider_photos', 'slide3.avif'),
-    UseImage('slider_photos', 'slide4.avif'),
-    UseImage('slider_photos', 'slide5.avif'),
-    UseImage('slider_photos', 'slide6.avif'),
-    UseImage('slider_photos', 'slide7.avif'),
-    UseImage('slider_photos', 'slide8.avif'),
-    UseImage('slider_photos', 'slide9.avif'),
-    UseImage('slider_photos', 'slide10.avif'),
-    UseImage('slider_photos', 'slide11.avif'),
-    UseImage('slider_photos', 'slide12.avif'),
-    UseImage('slider_photos', 'slide13.avif'),
-  ];
 
   const bgOverlay = UseImage('main', 'bg-overlay.avif')
 
@@ -34,10 +20,6 @@ export function MusicBlock() {
       document.documentElement.style.setProperty('--background-parallax', `url(${bgOverlay})`);
     }
   }, [bgOverlay]);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-  };
 
   return (
     <div className="music-block-head">
@@ -171,40 +153,6 @@ export function MusicBlock() {
           </div>
         </div>
       </Container>
-      <div className="special">
-        <div className="special-main">
-          <Container>
-            <div className="special-content-main">
-              <motion.h1
-                initial="initial"
-                whileInView="animate"
-                viewport={{once: true, amount: 0.2}}
-                transition={{staggerChildren: 0.1}}
-                variants={animationVariants.fadeRight}
-              >
-                Специальные предложения
-              </motion.h1>
-              <motion.p
-                initial="initial"
-                whileInView="animate"
-                viewport={{once: true, amount: 0.2}}
-                transition={{staggerChildren: 0.1}}
-                variants={animationVariants.fadeLeft}
-              >
-                Если у вас большой проект, пожалуйста пишите нам и мы обсудим
-                как получить максимум исходя из вашего бюджета.
-              </motion.p>
-              <Link className="link-contact" to={'/contact'} onClick={scrollToTop}>
-                Написать
-              </Link>
-            </div>
-            <div className="line" id='photos'></div>
-          </Container>
-        </div>
-      </div>
-      <Container className="swiperContainer">
-      <Slider slides={slideImages} />
-    </Container>
     </div>
   )
 }

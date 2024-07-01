@@ -4,14 +4,11 @@ import { Container, Row, Col } from 'reactstrap'
 import { motion } from 'framer-motion'
 import { animationVariants } from '../../constants/animationList'
 import UseImage from '../../services/UseImage'
+import scrollToTop from '../ScrollToTop/ScrollToTop'
 
 
 export function HeaderBanner() {
   const bannerbg = UseImage('main', 'banner-bg.avif');
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-  };
 
   return (
     <motion.div
@@ -33,7 +30,7 @@ export function HeaderBanner() {
               NITROJAM REC
             </motion.h1>
             <motion.h4 variants={animationVariants.fadeLeft} className="subtitle font-light">
-              Чтобы сделать по-настоящему качественную запись, необходимо вложить в нее свою душу! Мы предлагаем вырваться из городской суеты, забыть про весь окружающий шум, ради одной цели: полностью погрузиться в процесс рождения музыкальных шедевров.
+              Мы предлагаем вырваться из городской суеты, забыть про весь окружающий шум, ради одной цели: полностью погрузиться в процесс рождения музыкальных шедевров.
             </motion.h4>
             <motion.div variants={animationVariants.fadeUp} className="w-100 banner-btns">
               <Link to="/#price" className="btn btn-md m-t-30 btn-warning-gradiant font-14">
