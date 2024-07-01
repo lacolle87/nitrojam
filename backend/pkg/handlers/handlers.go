@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strconv"
 )
 
 type Slide struct {
@@ -43,25 +44,48 @@ func GetSlides(c *gin.Context) {
 		return
 	}
 
-	var slides []Slide
+	if len(files) == 0 {
+		c.JSON(http.StatusNotFound, gin.H{"error": "No slides found"})
+		return
+	}
+
+	var slideFiles []os.DirEntry
 	for _, file := range files {
 		if !file.IsDir() {
-			slidePath := filepath.Join(directory, file.Name())
-			_, found := cache.GetCache(slidePath)
-			if !found {
-				imageData, err := loadImageFromFile(slidePath)
-				if err != nil {
-					continue // skip this file if it cannot be read
-				}
-				cache.SetCache(slidePath, imageData)
-			}
-
-			slideURL := filepath.Join("/images/slider_photos", file.Name())
-			slides = append(slides, Slide{URL: slideURL})
+			slideFiles = append(slideFiles, file)
 		}
 	}
 
-	c.JSON(http.StatusOK, slides)
+	action := c.Query("action")
+	indexStr := c.Query("index")
+	index, err := strconv.Atoi(indexStr)
+	if err != nil || index < 0 || index >= len(slideFiles) {
+		index = 0
+	}
+
+	switch action {
+	case "next":
+		index = (index + 1) % len(slideFiles)
+	case "prev":
+		index = (index - 1 + len(slideFiles)) % len(slideFiles)
+	}
+
+	file := slideFiles[index]
+	slidePath := filepath.Join(directory, file.Name())
+	_, found := cache.GetCache(slidePath)
+	if !found {
+		imageData, err := loadImageFromFile(slidePath)
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Could not load image"})
+			return
+		}
+		cache.SetCache(slidePath, imageData)
+	}
+
+	slideURL := filepath.Join("/images/slider_photos", file.Name())
+	slide := Slide{URL: slideURL}
+
+	c.JSON(http.StatusOK, gin.H{"slide": slide, "index": index})
 }
 
 func loadImageFromFile(imagePath string) ([]byte, error) {

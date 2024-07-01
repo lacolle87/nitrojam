@@ -1,26 +1,31 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 import { Container, Row, Col } from 'reactstrap'
 import { motion } from 'framer-motion'
 import { animationVariants } from '../../constants/animationList'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/scrollbar'
-import 'swiper/css/navigation'
-import { Autoplay, Navigation, Scrollbar } from 'swiper/modules'
+import Slider from '../../components/Slider/Slider'
 
 import useImage from '../../services/useImage'
-
-type Slide = {
-  url: string;
-};
 
 export function MusicBlock() {
   const mixing = useImage('main', 'mixing.avif')
   const mastering = useImage('main', 'mastering.avif')
   const recording = useImage('main', 'record.avif')
-
-  const [slides, setSlides] = useState<Slide[]>([]);
+  const slideImages = [
+    useImage('slider_photos', 'slide1.avif'),
+    useImage('slider_photos', 'slide2.avif'),
+    useImage('slider_photos', 'slide3.avif'),
+    useImage('slider_photos', 'slide4.avif'),
+    useImage('slider_photos', 'slide5.avif'),
+    useImage('slider_photos', 'slide6.avif'),
+    useImage('slider_photos', 'slide7.avif'),
+    useImage('slider_photos', 'slide8.avif'),
+    useImage('slider_photos', 'slide9.avif'),
+    useImage('slider_photos', 'slide10.avif'),
+    useImage('slider_photos', 'slide11.avif'),
+    useImage('slider_photos', 'slide12.avif'),
+    useImage('slider_photos', 'slide13.avif'),
+  ];
 
   const bgOverlay = useImage('main', 'bg-overlay.avif')
 
@@ -29,19 +34,6 @@ export function MusicBlock() {
       document.documentElement.style.setProperty('--background-parallax', `url(${bgOverlay})`);
     }
   }, [bgOverlay]);
-
-  useEffect(() => {
-    const fetchSlides = async () => {
-      try {
-        const response = await fetch('/nj_api/slides');
-        const data: Slide[] = await response.json();
-        setSlides(data);
-      } catch (error) {
-        console.error('Error fetching slides:', error);
-      }
-    };
-    fetchSlides();
-  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
@@ -210,29 +202,9 @@ export function MusicBlock() {
           </Container>
         </div>
       </div>
-
       <Container className="swiperContainer">
-        <Swiper
-          slidesPerView={1}
-          loop={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          modules={[ Autoplay, Navigation, Scrollbar ]}
-          navigation={true}
-          className="mySwiper"
-          preloadImages={true}
-        >
-          <Swiper initialSlide={-1} spaceBetween={50} slidesPerView={1}>
-            {slides.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <img src={slide.url} alt={`Slide ${index + 1}`} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </Swiper>
-      </Container>
+      <Slider slides={slideImages} />
+    </Container>
     </div>
   )
 }
