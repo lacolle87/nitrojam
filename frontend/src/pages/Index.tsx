@@ -1,7 +1,6 @@
 import React from 'react'
-
-const HeaderBanner = React.lazy(() => import('../components/HeaderBanner/HeaderBanner'))
-const MusicBlock = React.lazy(() => import( '../components/MusicBlock/MusicBlock'))
+import { HeaderBanner } from '../components/HeaderBanner/HeaderBanner'
+import MusicBlock from '../components/MusicBlock/MusicBlock'
 
 export const IndexPage: React.FC = () => {
   return (
