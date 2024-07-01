@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, Suspense } from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 import { Container, Row, Col } from 'reactstrap'
 import { motion } from 'framer-motion'
 import { animationVariants } from '../../constants/animationList'
-import Slider from '../../components/Slider/Slider'
 
 import UseImage from '../../services/UseImage'
+
+const Slider = React.lazy(() => import('../../components/Slider/Slider'));
 
 export function MusicBlock() {
   const mixing = UseImage('main', 'mixing.avif')
@@ -203,8 +204,10 @@ export function MusicBlock() {
         </div>
       </div>
       <Container className="swiperContainer">
-      <Slider slides={slideImages} />
-    </Container>
+        <Suspense fallback={<div>Loading...</div>}>
+        <Slider slides={slideImages} />
+        </Suspense>
+      </Container>
     </div>
   )
 }

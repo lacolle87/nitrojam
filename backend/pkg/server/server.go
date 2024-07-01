@@ -19,7 +19,6 @@ func SetupRouter() *gin.Engine {
 	api := r.Group("/nj_api")
 	{
 		api.GET("/images/:directory/:imageName", handlers.GetImage)
-		api.GET("/slides", handlers.GetSlides)
 	}
 	return r
 }
