@@ -30,7 +30,7 @@ export function ContactForm() {
         </div>
         <div className={css.block}>
           <Link to={'mailto:record@nitrojam.ru'}>
-            <i className="fa fa-envelope"></i> info@nitrojamrec.com
+            <i className="fa fa-envelope"></i> record@nitrojam.ru
           </Link>
         </div>
       </Text>

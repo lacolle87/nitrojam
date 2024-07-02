@@ -1,14 +1,12 @@
-import React, { Suspense, lazy } from 'react';
-import { Routes, Route, Outlet } from 'react-router-dom';
-import { Header } from './components/Header/Header';
-import { Footer } from './components/Footer/Footer';
-
-// Лениво загружаем страницы
-const IndexPage = lazy(() => import('./pages/Index'));
-const AboutPage = lazy(() => import('./pages/About'));
-const ServicesPage = lazy(() => import('./pages/Services'));
-const ContactPage = lazy(() => import('./pages/Contact'));
-const PrivacyPage = lazy(() => import('./pages/Privacy'));
+import React from 'react'
+import { Routes, Route, Outlet } from 'react-router-dom'
+import { IndexPage } from './pages/Index'
+import AboutPage from './pages/About'
+import { Header } from './components/Header/Header'
+import { Footer } from './components/Footer/Footer'
+import { ServicesPage } from './pages/Services'
+import ContactPage from './pages/Contact'
+import { PrivacyPage } from './pages/Privacy'
 
 function AppLayout() {
   return (
@@ -26,18 +24,16 @@ function AppLayout() {
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        <Route path="/" element={<AppLayout />}>
-          <Route index element={<IndexPage />} />
-          <Route path="about_us" element={<AboutPage />} />
-          <Route path="services" element={<ServicesPage />} />
-          <Route path="contact" element={<ContactPage />} />
-          <Route path="privacy" element={<PrivacyPage />} />
-        </Route>
-      </Routes>
-    </Suspense>
-  );
+    <Routes>
+      <Route path="/" element={<AppLayout />}>
+        <Route index element={<IndexPage />} />
+        <Route path="about_us" element={<AboutPage />} />
+        <Route path="services" element={<ServicesPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="privacy" element={<PrivacyPage />} />
+      </Route>
+    </Routes>
+  )
 }
 
 export default App;

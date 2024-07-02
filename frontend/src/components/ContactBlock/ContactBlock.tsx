@@ -35,7 +35,7 @@ const ContactBlock: React.FC<ContactBlockProps> = () => {
               <div className={css.block}>
                 <h2>Email</h2>
                 <Link to={'mailto:record@nitrojam.ru'}>
-                  <i className="fa fa-envelope"></i> info@nitrojamrec.com
+                  <i className="fa fa-envelope"></i> record@nitrojam.ru
                 </Link>
               </div>
               <div className={css.block}>
