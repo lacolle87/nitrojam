@@ -70,7 +70,7 @@ function CardMusic({title, content, image, id}: ServiceCardProps) {
   )
 }
 
-export function ServicesBlock() {
+function ServicesBlock() {
   const mixing = UseImage('main', 'mixing.avif')
   const mastering = UseImage('main', 'mastering.avif')
   const recording = UseImage('main', 'record.avif')
@@ -140,3 +140,5 @@ export function ServicesBlock() {
     </Container>
   )
 }
+
+export default ServicesBlock

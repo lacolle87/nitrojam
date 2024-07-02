@@ -20,7 +20,7 @@ import { AccordionElement } from '../AccordionElement/AccordionElement'
 
 import UseImage from '../../services/UseImage'
 
-export const AboutUsBlock: React.FC = (): React.JSX.Element | null => {
+function AboutUsBlock() {
   const logo = UseImage('aboutus_photos', 'logobig.png')
   const photo1 = UseImage('aboutus_photos', 'photo1.avif')
   const photo2 = UseImage('aboutus_photos', 'photo2.avif')
@@ -242,3 +242,5 @@ export const AboutUsBlock: React.FC = (): React.JSX.Element | null => {
     </>
   )
 }
+
+export default AboutUsBlock

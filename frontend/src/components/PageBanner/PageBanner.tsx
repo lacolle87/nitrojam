@@ -1,14 +1,14 @@
-import React from 'react'
-import { Container, Row, Col } from 'reactstrap'
-import { motion } from 'framer-motion'
-import { animationVariants } from '../../constants/animationList'
+import React from 'react';
+import { Container, Row, Col } from 'reactstrap';
+import { motion } from 'framer-motion';
+import { animationVariants } from '../../constants/animationList';
 
 interface PageBannerProps {
   title: string;
   background: string;
 }
 
-const PageBanner: React.FC<PageBannerProps> = ({ title, background }) => {
+function PageBanner({ title, background }: PageBannerProps) {
   return (
     <motion.div
       initial="initial"
@@ -29,7 +29,7 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, background }) => {
         </Row>
       </Container>
     </motion.div>
-  )
+  );
 }
 
 export default PageBanner

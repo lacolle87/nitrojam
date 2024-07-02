@@ -1,11 +1,11 @@
 import React from 'react'
 import PageBanner from '../components/PageBanner/PageBanner'
-import { FaqBlock } from '../components/FaqBlock/FaqBlock'
-import { ServicesBlock } from '../components/ServicesBlock/ServicesBlock'
+import FaqBlock from '../components/FaqBlock/FaqBlock'
+import ServicesBlock from '../components/ServicesBlock/ServicesBlock'
 
 import UseImage from '../services/UseImage'
 
-export const ServicesPage: React.FC = () => {
+function ServicesPage() {
   const servicesBanner = UseImage('banners', 'services_banner.avif')
   return (
     <>

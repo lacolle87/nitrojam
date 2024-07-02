@@ -1,12 +1,12 @@
 import React from 'react'
 import { Routes, Route, Outlet } from 'react-router-dom'
-import { IndexPage } from './pages/Index'
+import IndexPage from './pages/Index'
 import AboutPage from './pages/About'
-import { Header } from './components/Header/Header'
-import { Footer } from './components/Footer/Footer'
-import { ServicesPage } from './pages/Services'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import ServicesPage from './pages/Services'
 import ContactPage from './pages/Contact'
-import { PrivacyPage } from './pages/Privacy'
+import PrivacyPage from './pages/Privacy'
 
 function AppLayout() {
   return (

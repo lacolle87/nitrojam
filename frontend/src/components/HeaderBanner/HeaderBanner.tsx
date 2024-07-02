@@ -7,7 +7,7 @@ import UseImage from '../../services/UseImage'
 import scrollToTop from '../ScrollToTop/ScrollToTop'
 
 
-export function HeaderBanner() {
+function HeaderBanner() {
   const bannerbg = UseImage('main', 'banner-bg.avif');
 
   return (

@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import { Tooltip } from '@chakra-ui/react'
 
-export function Footer() {
+function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (

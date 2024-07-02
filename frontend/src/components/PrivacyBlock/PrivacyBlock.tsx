@@ -2,7 +2,7 @@ import React from 'react'
 import {Container} from 'reactstrap'
 import css from './PrivacyBlock.module.scss'
 
-export function PrivacyBlock() {
+function PrivacyBlock() {
   return (
     <Container>
       <h1 className={css.title}>
@@ -234,3 +234,5 @@ export function PrivacyBlock() {
     </Container>
   )
 }
+
+export default PrivacyBlock

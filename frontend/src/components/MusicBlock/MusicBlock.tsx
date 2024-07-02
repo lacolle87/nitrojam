@@ -8,7 +8,7 @@ import UseImage from '../../services/UseImage'
 
 import scrollToTop from '../ScrollToTop/ScrollToTop'
 
-export function MusicBlock() {
+function MusicBlock() {
   const mixing = UseImage('main', 'mixing.avif')
   const mastering = UseImage('main', 'mastering.avif')
   const recording = UseImage('main', 'record.avif')

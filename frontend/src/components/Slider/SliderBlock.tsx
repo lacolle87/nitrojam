@@ -2,7 +2,7 @@ import {Container} from 'reactstrap'
 import Slider from './Slider'
 import UseImage from '../../services/UseImage'
 
-export function SliderBlock() {
+function SliderBlock() {
   const slideImages = [
     UseImage('slider_photos', 'slide1.avif'),
     UseImage('slider_photos', 'slide2.avif'),

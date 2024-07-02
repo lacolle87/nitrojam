@@ -1,10 +1,10 @@
 import React from 'react'
 import PageBanner from '../components/PageBanner/PageBanner'
-import { PrivacyBlock } from '../components/PrivacyBlock/PrivacyBlock'
+import PrivacyBlock from '../components/PrivacyBlock/PrivacyBlock'
 
 import UseImage from '../services/UseImage'
 
-export const PrivacyPage: React.FC = () => {
+function PrivacyPage() {
   const privacyBanner = UseImage('main', 'banner-bg.avif')
   return (
     <>

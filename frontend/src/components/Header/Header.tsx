@@ -15,7 +15,7 @@ import UseImage from '../../services/UseImage'
 
 import scrollToTop from '../ScrollToTop/ScrollToTop'
 
-export function Header() {
+function Header() {
   const logo = UseImage('logos', 'white-text.png')
   const location = useLocation();
 
@@ -107,3 +107,5 @@ export function Header() {
     </div>
   )
 }
+
+export default Header
