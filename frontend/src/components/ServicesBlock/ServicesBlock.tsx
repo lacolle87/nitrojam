@@ -6,61 +6,65 @@ import css from './ServicesBlock.module.scss';
 import { Text } from '@chakra-ui/react';
 
 import UseImage from '../../services/UseImage';
-import ServiceCard from './ServiceCard'
-
-const services = [
-  {
-    title: "Сведение",
-    id: "mixing",
-    content: (
-      <>
-        Сведение одного трека: от{' '}
-        <Text as="b" color="#ffb100">
-          6000 рублей
-        </Text>
-        <br />
-        Редактирование одного трека (барабаны, голос): от{' '}
-        <Text as="b" color="#ffb100">
-          2000 рублей
-        </Text>
-      </>
-    ),
-    image: UseImage('main', 'mixing.avif'),
-  },
-  {
-    title: "Запись",
-    id: "recording",
-    content: (
-      <>
-        Один час записи:{' '}
-        <Text as="b" color="#ffb100">
-          1300 рублей
-        </Text>
-        <br />
-        день записи (с 11:00 до 22:00):{' '}
-        <Text as="b" color="#ffb100">
-          12000 рублей
-        </Text>
-      </>
-    ),
-    image: UseImage('main', 'record.avif'),
-  },
-  {
-    title: "Мастеринг",
-    id: "mastering",
-    content: (
-      <>
-        Мастеринг одного трека:{' '}
-        <Text as="b" color="#ffb100">
-          2000 рублей
-        </Text>
-      </>
-    ),
-    image: UseImage('main', 'mastering.avif'),
-  },
-];
+import ServiceCard from './ServiceCard';
 
 function ServicesBlock() {
+  const mixingImage = UseImage('main', 'mixing.avif');
+  const recordingImage = UseImage('main', 'record.avif');
+  const masteringImage = UseImage('main', 'mastering.avif');
+
+  const services = [
+    {
+      title: "Сведение",
+      id: "mixing",
+      content: (
+        <>
+          Сведение одного трека: от{' '}
+          <Text as="b" color="#ffb100">
+            6000 рублей
+          </Text>
+          <br />
+          Редактирование одного трека (барабаны, голос): от{' '}
+          <Text as="b" color="#ffb100">
+            2000 рублей
+          </Text>
+        </>
+      ),
+      image: mixingImage,
+    },
+    {
+      title: "Запись",
+      id: "recording",
+      content: (
+        <>
+          Один час записи:{' '}
+          <Text as="b" color="#ffb100">
+            1300 рублей
+          </Text>
+          <br />
+          день записи (с 11:00 до 22:00):{' '}
+          <Text as="b" color="#ffb100">
+            12000 рублей
+          </Text>
+        </>
+      ),
+      image: recordingImage,
+    },
+    {
+      title: "Мастеринг",
+      id: "mastering",
+      content: (
+        <>
+          Мастеринг одного трека:{' '}
+          <Text as="b" color="#ffb100">
+            2000 рублей
+          </Text>
+        </>
+      ),
+      image: masteringImage,
+    },
+  ];
+
   return (
     <Container>
       <motion.div
