@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, {useState, useRef, useEffect, useCallback} from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 import {
   Container,
@@ -15,13 +15,13 @@ import UseImage from '../../services/UseImage'
 
 import scrollToTop from '../ScrollToTop/ScrollToTop'
 
-function Header() {
+const Header = React.memo (function Header() {
   const logo = UseImage('logos', 'white-text.png')
   const location = useLocation();
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+  const toggle = useCallback(() => setIsOpen(!isOpen), []);
 
   const [navBackground, setNavBackground] = useState(false);
   const navRef = useRef(navBackground)
@@ -30,9 +30,7 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const show = window.scrollY > 50;
-      if (navRef.current !== show) {
-        setNavBackground(show)
-      }
+      setNavBackground(show);
     };
     document.addEventListener('scroll', handleScroll);
     return () => {
@@ -107,5 +105,6 @@ function Header() {
     </div>
   )
 }
+)
 
 export default Header

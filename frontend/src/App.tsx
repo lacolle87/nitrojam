@@ -1,26 +1,11 @@
 import React from 'react'
 import { Routes, Route, Outlet } from 'react-router-dom'
+import AppLayout from './AppLayout'
 import IndexPage from './pages/Index'
 import AboutPage from './pages/About'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
 import ServicesPage from './pages/Services'
 import ContactPage from './pages/Contact'
 import PrivacyPage from './pages/Privacy'
-
-function AppLayout() {
-  return (
-    <div id="main-wrapper">
-      <Header />
-      <div className="page-wrapper">
-        <div className="container-fluid">
-          <Outlet />
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-}
 
 function App() {
   return (
@@ -36,4 +21,4 @@ function App() {
   )
 }
 
-export default App;
+export default App
