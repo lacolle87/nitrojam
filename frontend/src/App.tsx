@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route, Outlet } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import AppLayout from './AppLayout'
 import IndexPage from './pages/Index'
 import AboutPage from './pages/About'
