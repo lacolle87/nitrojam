@@ -2,7 +2,7 @@ import React from 'react'
 import HeaderBanner from '../components/HeaderBanner/HeaderBanner'
 import MusicBlock from '../components/MusicBlock/MusicBlock'
 import Special from '../components/Special/Special'
-import SliderBlock from '../components/Slider/SliderBlock'
+import FaqBlock from '../components/FaqBlock/FaqBlock'
 
 function IndexPage() {
   return (
@@ -10,7 +10,7 @@ function IndexPage() {
       <HeaderBanner />
       <MusicBlock />
       <Special />
-      <SliderBlock />
+      <FaqBlock />
     </>
   )
 }

@@ -84,7 +84,7 @@ const Header = React.memo (function Header() {
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" smooth to={'/#photos'}>
+                  <Link className="nav-link" smooth to={'/photos#top'} onClick={scrollToTop}>
                     Фотографии
                   </Link>
                 </NavItem>
