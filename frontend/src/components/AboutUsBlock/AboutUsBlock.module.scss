@@ -5,8 +5,13 @@
     gap: 40px;
     padding: 100px 0;
 }
-.blockimg img{
+.blockimg img {
     width: 450px;
+}
+@media (max-width: 768px) {
+    .blockimg img {
+        width: 25%;
+    }
 }
 .blockcontent{
     display: flex;
