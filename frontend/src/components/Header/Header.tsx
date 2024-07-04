@@ -12,7 +12,6 @@ import {
 import { useLocation } from 'react-router-dom'
 
 import UseImage from '../../services/UseImage'
-
 import scrollToTop from '../ScrollToTop/ScrollToTop'
 
 const Header = React.memo (function Header() {
@@ -53,7 +52,7 @@ const Header = React.memo (function Header() {
       >
         <Container className="po-relative">
           <Navbar className="navbar-expand-lg h6-nav-bar">
-            <NavbarBrand>
+            <NavbarBrand className={"logo-size"}>
               <Link to={'/'} onClick={scrollToTop}>
                 <img src={logo} alt="nitrojam" />
               </Link>
