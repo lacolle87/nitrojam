@@ -20,7 +20,9 @@ const Header = React.memo (function Header() {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = useCallback(() => setIsOpen(!isOpen), []);
+    const toggle = useCallback(() => {
+      setIsOpen(prevState => !prevState);
+    }, []);
 
   const [navBackground, setNavBackground] = useState(false);
   const navRef = useRef(navBackground)
