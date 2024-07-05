@@ -6,7 +6,7 @@ import css from './FaqBlock.module.scss'
 import { Accordion } from '@chakra-ui/react'
 import { AccordionElement } from '../AccordionElement/AccordionElement';
 
-export function FaqBlock() {
+const FaqBlock = React.memo (function FaqBlock() {
   return (
     <Container>
       <motion.div
@@ -46,5 +46,6 @@ export function FaqBlock() {
     </Container>
   )
 }
+)
 
 export default FaqBlock
