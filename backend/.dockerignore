@@ -9,7 +9,7 @@ README.md
 arm/
 powerpc/
 mips/
-/images/
+/frontend/src/images/
 /logs/
 .env
 .dockerignore

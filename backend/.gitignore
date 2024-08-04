@@ -2,6 +2,6 @@
 /.idea/backend.iml
 /.idea/modules.xml
 /.idea/vcs.xml
-/images/
+/frontend/src/images/
 /logs/
 .env

@@ -4,26 +4,13 @@ volumes:
   static:
 
 services:
-  backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    volumes:
-      - ./backend/.env:/app/.env:ro
-      - ./backend/images:/app/images/
-      - ./logs:/app/logs
-
-
   frontend:
     build:
-      context: ./frontend
+      context: ./react
       dockerfile: Dockerfile
     volumes:
-      - ./frontend/.env:/app/.env:ro
       - static:/app/result_build
     command: /bin/sh -c "cp -r /app/build/. /app/result_build/"
-    depends_on:
-      - backend
 
   nginx:
     build:
