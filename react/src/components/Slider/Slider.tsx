@@ -37,7 +37,7 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <img src={slide} alt={`Slide ${index}`} loading="lazy"/>
+              <img src={slide} alt={`Slide ${index}`}/>
             </SwiperSlide>
           ))}
         </Swiper>
