@@ -7,10 +7,9 @@ function UseImage(directory: string, imageName: string): string {
   useEffect(() => {
     const fetchAndSetImage = async () => {
       try {
-        const fetchedImageUrl = await fetchImageUrl(directory, imageName)
+        const fetchedImageUrl = fetchImageUrl(directory, imageName)
         setImageUrl(fetchedImageUrl)
       } catch (error) {
-        console.error('Failed to fetch image:', error)
       }
     };
 

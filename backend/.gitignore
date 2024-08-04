@@ -1,7 +1,0 @@
-/.idea/.gitignore
-/.idea/backend.iml
-/.idea/modules.xml
-/.idea/vcs.xml
-/frontend/src/images/
-/logs/
-.env

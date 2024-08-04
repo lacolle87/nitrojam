@@ -8,15 +8,16 @@ services:
     image: registry.gitlab.com/lacolle87/cr/nitrojam_frontend:latest
     volumes:
       - static:/app/result_build
-    command: /bin/sh -c "cp -r /app/build/. /app/result_build/"
+    command: /bin/sh -c "cp -r /app/dist/. /app/result_build/"
 
-  nginx:
+  nginx_nj:
     image: registry.gitlab.com/lacolle87/cr/nitrojam_nginx:latest
     restart: always
     ports:
       - "9000:80"
     volumes:
       - ./nginx:/etc/nginx/conf.d
+      - ./images:/images
       - static:/usr/share/nginx/html
     depends_on:
       - frontend
