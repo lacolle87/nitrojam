@@ -6,6 +6,6 @@ import compression from 'vite-plugin-compression';
 export default defineConfig({
   plugins: [
     react(),
-    compression() // Enable compression
+    compression(),
   ],
 });
