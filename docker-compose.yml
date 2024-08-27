@@ -11,12 +11,12 @@ services:
     command: /bin/sh -c "cp -r /app/dist/. /app/result_build/"
 
   nginx_nj:
-    image: registry.gitlab.com/lacolle87/cr/nitrojam_nginx:latest
+    image: nginx:1.27.1-alpine
     restart: always
     ports:
       - "9000:80"
     volumes:
-      - ./nginx:/etc/nginx/conf.d
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./images:/images
       - static:/usr/share/nginx/html
     depends_on:
