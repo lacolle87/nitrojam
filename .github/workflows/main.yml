@@ -31,7 +31,7 @@ jobs:
 
   deploy_nginx_conf:
     runs-on: ubuntu-latest
-    needs: build_and_push_to_gitlab
+    needs: build_frontend_and_push_to_gitlab
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
