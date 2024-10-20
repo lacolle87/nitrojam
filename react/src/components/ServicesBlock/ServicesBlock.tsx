@@ -43,7 +43,7 @@ function ServicesBlock() {
           <br />
           день записи (с 11:00 до 22:00):{' '}
           <Text as="b" color="#ffb100">
-            12000 рублей
+            13000 рублей
           </Text>
         </>
       ),

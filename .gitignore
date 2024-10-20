@@ -28,7 +28,7 @@ yarn-error.log*
 /.idea/codeStyles/Project.xml
 /.idea/vcs.xml
 /frontend/node_modules/
-/docker-compose.dev.yml
+/compose.dev.yaml
 
 .env
 /logs/
