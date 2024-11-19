@@ -10,8 +10,6 @@ const Footer = React.memo (function Footer() {
       <Container>
         <Row>
           <Col lg="3" md="6" className="m-b-30">
-            <h5 className="m-b-20">Адрес</h5>
-            <p>Московская область, городской округ Химки, Поярково, дом 131</p>
           </Col>
           <Col lg="3" md="6" className="m-b-30">
             <h5 className="m-b-20">Часы работы</h5>

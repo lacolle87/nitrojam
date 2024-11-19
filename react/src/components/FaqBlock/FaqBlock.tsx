@@ -21,10 +21,6 @@ const FaqBlock = React.memo (function FaqBlock() {
         <div className={css['main-accordion']}>
           <Accordion allowToggle width={'xl'}>
             <AccordionElement
-              title="Во сколько приезжать на запись?"
-              text="Студия работает с 11:00 до 22:00. В случае бронирования студии на весь день приезжайте в 11:00."
-            />
-            <AccordionElement
               title="Есть ли поблизости магазины? Доставка?"
               text="Да, в шаговой доступности четыре магазина, и аптека. Работает яндекс доставка и есть местная пиццерия."
             />
