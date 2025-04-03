@@ -103,11 +103,11 @@ function MusicBlock() {
                   className="left-side"
                 >
                   <div className="d-flex flex-column justify-content-lg-center align-items-start">
-                    <h2 className="text-warning">1300 рублей</h2>
+                    <h2 className="text-warning">1500 рублей</h2>
                     <p className="text-xl">1 час записи</p>
                   </div>
                   <div className="d-flex flex-column justify-content-lg-center align-items-start">
-                    <h2 className="text-warning">13000 рублей</h2>
+                    <h2 className="text-warning">15000 рублей</h2>
                     <p className="text-xl">День записи (с 11:00 до 22:00)</p>
                   </div>
                 </motion.div>
@@ -120,7 +120,7 @@ function MusicBlock() {
                   className="left-side"
                 >
                   <div className="d-flex flex-column justify-content-lg-center align-items-end">
-                    <h2 className="text-warning">от 6000 рублей</h2>
+                    <h2 className="text-warning">от 10000 рублей</h2>
                     <p className="text-xl">сведение одного трека</p>
                   </div>
                   <div className="d-flex flex-column justify-content-lg-center align-items-end">
